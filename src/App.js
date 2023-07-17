@@ -37,12 +37,15 @@ function App() {
     width: `${hour * (100 / 60)}%`,
   };
 
+  const loading = <h3 className={time.loading}>loading</h3>;
+
   return (
     <div className="App">
       <div className={time.wrapper}>
         <h1 className={time.time}>
           {!hour ? "00" : hour}:{!minute ? "00" : minute}:{!second ? "00" : second} {session}
         </h1>
+        {!second && loading}
         <div className={time.secondAnimation} style={secondBar}>
           &nbsp;
         </div>
