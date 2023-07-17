@@ -3,12 +3,14 @@ import React, { useState, useEffect } from "react";
 import time from "./Time.module.css";
 
 function App() {
+  // State management
   let date = new Date();
   const [second, setSecond] = useState();
   const [hour, setHour] = useState();
   const [minute, setMinute] = useState();
   const [session, setSession] = useState("AM");
 
+  //Main core and with clean function
   useEffect(() => {
     const interval = setInterval(() => {
       setSecond((prev) => (date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds()));
@@ -22,6 +24,7 @@ function App() {
     };
   });
 
+  //Dynamic style CSS module
   const secondBar = {
     backgroundImage: `linear-gradient(90deg, transparent ${second / 10}%, #5856d6 50%)`,
     width: `${second * (100 / 60)}%`,
@@ -37,6 +40,7 @@ function App() {
     width: `${hour * (100 / 60)}%`,
   };
 
+  //Loading content
   const loading = <h3 className={time.loading}>loading</h3>;
 
   return (
