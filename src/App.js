@@ -23,17 +23,17 @@ function App() {
   });
 
   const secondBar = {
-    backgroundImage: `linear-gradient(90deg, transparent ${second / 10}%, #5856d6 100%)`,
+    backgroundImage: `linear-gradient(90deg, transparent ${second / 10}%, #5856d6 50%)`,
     width: `${second * (100 / 60)}%`,
   };
 
   const minuteBar = {
-    backgroundImage: `linear-gradient(90deg, transparent ${second / 10}%, #ff2d55 100%)`,
+    backgroundImage: `linear-gradient(90deg, transparent ${second / 10}%, #ff2d55 50%)`,
     width: `${minute * (100 / 60)}%`,
   };
 
   const hourBar = {
-    backgroundImage: `linear-gradient(90deg, transparent ${second / 10}%, #ffcc00 100%)`,
+    backgroundImage: `linear-gradient(90deg, transparent ${second / 10}%, #ffcc00 50%)`,
     width: `${hour * (100 / 60)}%`,
   };
 
